@@ -6,8 +6,8 @@ const getAllWorkouts = (req, res) => {
         res.send({ status: "OK", data: allWorkouts });
     } catch (error) {
         res
-            .status(error?.status || 500)
-            .send({ status: "FAILED", data: { error: error?.message || error } });
+            .status(error.status || 500)
+            .send({ status: "FAILED", data: { error: error.message || error } });
     }
 };
 
@@ -26,8 +26,8 @@ const getOneWorkout = (req, res) => {
         res.send({ status: "OK", data: workout });
     } catch (error) {
         res
-            .status(error?.status || 500)
-            .send({ status: "FAILED", data: { error: error?.message || error } });
+            .status(error.status || 500)
+            .send({ status: "FAILED", data: { error: error.message || error } });
     }
 };
 
@@ -64,8 +64,8 @@ const createNewWorkout = (req, res) => {
         res.status(201).send({ status: "OK", data: createdWorkout });
     } catch (error) {
         res
-            .status(error?.status || 500)
-            .send({ status: "FAILED", data: { error: error?.message || error } });
+            .status(error.status || 500)
+            .send({ status: "FAILED", data: { error: error.message || error } });
     }
 };
 
@@ -87,8 +87,8 @@ const updateOneWorkout = (req, res) => {
         res.send({ status: "OK", data: updatedWorkout });
     } catch (error) {
         res
-            .status(error?.status || 500)
-            .send({ status: "FAILED", data: { error: error?.message || error } });
+            .status(error.status || 500)
+            .send({ status: "FAILED", data: { error: error.message || error } });
     }
 };
 
@@ -107,8 +107,8 @@ const deleteOneWorkout = (req, res) => {
         res.status(204).send({ status: "OK" });
     } catch (error) {
         res
-            .status(error?.status || 500)
-            .send({ status: "FAILED", data: { error: error?.message || error } });
+            .status(error.status || 500)
+            .send({ status: "FAILED", data: { error: error.message || error } });
     }
 };
 
